@@ -27,5 +27,5 @@ type State {
 }
 
 type Query {
-    fetchCountries: [Country]
+    countries: [Country]
 }

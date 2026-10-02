@@ -1,17 +1,17 @@
 import 'package:gql/ast.dart';
 
 class Query$FetchCountries {
-  Query$FetchCountries({this.fetchCountries, this.$__typename = 'Query'});
+  Query$FetchCountries({this.countries, this.$__typename = 'Query'});
 
   factory Query$FetchCountries.fromJson(Map<String, dynamic> json) {
-    final l$fetchCountries = json['fetchCountries'];
+    final l$countries = json['countries'];
     final l$$__typename = json['__typename'];
     return Query$FetchCountries(
-      fetchCountries: (l$fetchCountries as List<dynamic>?)
+      countries: (l$countries as List<dynamic>?)
           ?.map(
             (e) => e == null
                 ? null
-                : Query$FetchCountries$fetchCountries.fromJson(
+                : Query$FetchCountries$countries.fromJson(
                     (e as Map<String, dynamic>),
                   ),
           )
@@ -20,16 +20,14 @@ class Query$FetchCountries {
     );
   }
 
-  final List<Query$FetchCountries$fetchCountries?>? fetchCountries;
+  final List<Query$FetchCountries$countries?>? countries;
 
   final String $__typename;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
-    final l$fetchCountries = fetchCountries;
-    _resultData['fetchCountries'] = l$fetchCountries
-        ?.map((e) => e?.toJson())
-        .toList();
+    final l$countries = countries;
+    _resultData['countries'] = l$countries?.map((e) => e?.toJson()).toList();
     final l$$__typename = $__typename;
     _resultData['__typename'] = l$$__typename;
     return _resultData;
@@ -37,12 +35,10 @@ class Query$FetchCountries {
 
   @override
   int get hashCode {
-    final l$fetchCountries = fetchCountries;
+    final l$countries = countries;
     final l$$__typename = $__typename;
     return Object.hashAll([
-      l$fetchCountries == null
-          ? null
-          : Object.hashAll(l$fetchCountries.map((v) => v)),
+      l$countries == null ? null : Object.hashAll(l$countries.map((v) => v)),
       l$$__typename,
     ]);
   }
@@ -55,20 +51,20 @@ class Query$FetchCountries {
     if (other is! Query$FetchCountries || runtimeType != other.runtimeType) {
       return false;
     }
-    final l$fetchCountries = fetchCountries;
-    final lOther$fetchCountries = other.fetchCountries;
-    if (l$fetchCountries != null && lOther$fetchCountries != null) {
-      if (l$fetchCountries.length != lOther$fetchCountries.length) {
+    final l$countries = countries;
+    final lOther$countries = other.countries;
+    if (l$countries != null && lOther$countries != null) {
+      if (l$countries.length != lOther$countries.length) {
         return false;
       }
-      for (int i = 0; i < l$fetchCountries.length; i++) {
-        final l$fetchCountries$entry = l$fetchCountries[i];
-        final lOther$fetchCountries$entry = lOther$fetchCountries[i];
-        if (l$fetchCountries$entry != lOther$fetchCountries$entry) {
+      for (int i = 0; i < l$countries.length; i++) {
+        final l$countries$entry = l$countries[i];
+        final lOther$countries$entry = lOther$countries[i];
+        if (l$countries$entry != lOther$countries$entry) {
           return false;
         }
       }
-    } else if (l$fetchCountries != lOther$fetchCountries) {
+    } else if (l$countries != lOther$countries) {
       return false;
     }
     final l$$__typename = $__typename;
@@ -95,15 +91,13 @@ abstract class CopyWith$Query$FetchCountries<TRes> {
       _CopyWithStubImpl$Query$FetchCountries;
 
   TRes call({
-    List<Query$FetchCountries$fetchCountries?>? fetchCountries,
+    List<Query$FetchCountries$countries?>? countries,
     String? $__typename,
   });
-  TRes fetchCountries(
-    Iterable<Query$FetchCountries$fetchCountries?>? Function(
+  TRes countries(
+    Iterable<Query$FetchCountries$countries?>? Function(
       Iterable<
-        CopyWith$Query$FetchCountries$fetchCountries<
-          Query$FetchCountries$fetchCountries
-        >?
+        CopyWith$Query$FetchCountries$countries<Query$FetchCountries$countries>?
       >?,
     )
     _fn,
@@ -121,34 +115,32 @@ class _CopyWithImpl$Query$FetchCountries<TRes>
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({
-    Object? fetchCountries = _undefined,
+    Object? countries = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
     Query$FetchCountries(
-      fetchCountries: fetchCountries == _undefined
-          ? _instance.fetchCountries
-          : (fetchCountries as List<Query$FetchCountries$fetchCountries?>?),
+      countries: countries == _undefined
+          ? _instance.countries
+          : (countries as List<Query$FetchCountries$countries?>?),
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
     ),
   );
 
-  TRes fetchCountries(
-    Iterable<Query$FetchCountries$fetchCountries?>? Function(
+  TRes countries(
+    Iterable<Query$FetchCountries$countries?>? Function(
       Iterable<
-        CopyWith$Query$FetchCountries$fetchCountries<
-          Query$FetchCountries$fetchCountries
-        >?
+        CopyWith$Query$FetchCountries$countries<Query$FetchCountries$countries>?
       >?,
     )
     _fn,
   ) => call(
-    fetchCountries: _fn(
-      _instance.fetchCountries?.map(
+    countries: _fn(
+      _instance.countries?.map(
         (e) => e == null
             ? null
-            : CopyWith$Query$FetchCountries$fetchCountries(e, (i) => i),
+            : CopyWith$Query$FetchCountries$countries(e, (i) => i),
       ),
     )?.toList(),
   );
@@ -161,11 +153,11 @@ class _CopyWithStubImpl$Query$FetchCountries<TRes>
   TRes _res;
 
   call({
-    List<Query$FetchCountries$fetchCountries?>? fetchCountries,
+    List<Query$FetchCountries$countries?>? countries,
     String? $__typename,
   }) => _res;
 
-  fetchCountries(_fn) => _res;
+  countries(_fn) => _res;
 }
 
 const documentNodeQueryFetchCountries = DocumentNode(
@@ -178,7 +170,7 @@ const documentNodeQueryFetchCountries = DocumentNode(
       selectionSet: SelectionSetNode(
         selections: [
           FieldNode(
-            name: NameNode(value: 'fetchCountries'),
+            name: NameNode(value: 'countries'),
             alias: null,
             arguments: [],
             directives: [],
@@ -186,28 +178,28 @@ const documentNodeQueryFetchCountries = DocumentNode(
               selections: [
                 FieldNode(
                   name: NameNode(value: 'name'),
-                  alias: NameNode(value: 'name'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
                 ),
                 FieldNode(
                   name: NameNode(value: 'native'),
-                  alias: NameNode(value: 'native'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
                 ),
                 FieldNode(
                   name: NameNode(value: 'awsRegion'),
-                  alias: NameNode(value: 'awsRegion'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
                 ),
                 FieldNode(
                   name: NameNode(value: 'capital'),
-                  alias: NameNode(value: 'capital'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
@@ -221,7 +213,7 @@ const documentNodeQueryFetchCountries = DocumentNode(
                     selections: [
                       FieldNode(
                         name: NameNode(value: 'name'),
-                        alias: NameNode(value: 'name'),
+                        alias: null,
                         arguments: [],
                         directives: [],
                         selectionSet: null,
@@ -238,28 +230,28 @@ const documentNodeQueryFetchCountries = DocumentNode(
                 ),
                 FieldNode(
                   name: NameNode(value: 'currencies'),
-                  alias: NameNode(value: 'currencies'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
                 ),
                 FieldNode(
                   name: NameNode(value: 'currency'),
-                  alias: NameNode(value: 'currency'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
                 ),
                 FieldNode(
                   name: NameNode(value: 'emoji'),
-                  alias: NameNode(value: 'emoji'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
                 ),
                 FieldNode(
                   name: NameNode(value: 'emojiU'),
-                  alias: NameNode(value: 'emojiU'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
@@ -273,14 +265,14 @@ const documentNodeQueryFetchCountries = DocumentNode(
                     selections: [
                       FieldNode(
                         name: NameNode(value: 'name'),
-                        alias: NameNode(value: 'name'),
+                        alias: null,
                         arguments: [],
                         directives: [],
                         selectionSet: null,
                       ),
                       FieldNode(
                         name: NameNode(value: 'native'),
-                        alias: NameNode(value: 'native'),
+                        alias: null,
                         arguments: [],
                         directives: [],
                         selectionSet: null,
@@ -297,7 +289,7 @@ const documentNodeQueryFetchCountries = DocumentNode(
                 ),
                 FieldNode(
                   name: NameNode(value: 'phone'),
-                  alias: NameNode(value: 'phone'),
+                  alias: null,
                   arguments: [],
                   directives: [],
                   selectionSet: null,
@@ -311,7 +303,7 @@ const documentNodeQueryFetchCountries = DocumentNode(
                     selections: [
                       FieldNode(
                         name: NameNode(value: 'name'),
-                        alias: NameNode(value: 'name'),
+                        alias: null,
                         arguments: [],
                         directives: [],
                         selectionSet: null,
@@ -349,8 +341,8 @@ const documentNodeQueryFetchCountries = DocumentNode(
   ],
 );
 
-class Query$FetchCountries$fetchCountries {
-  Query$FetchCountries$fetchCountries({
+class Query$FetchCountries$countries {
+  Query$FetchCountries$countries({
     required this.name,
     required this.native,
     required this.awsRegion,
@@ -366,9 +358,7 @@ class Query$FetchCountries$fetchCountries {
     this.$__typename = 'Country',
   });
 
-  factory Query$FetchCountries$fetchCountries.fromJson(
-    Map<String, dynamic> json,
-  ) {
+  factory Query$FetchCountries$countries.fromJson(Map<String, dynamic> json) {
     final l$name = json['name'];
     final l$native = json['native'];
     final l$awsRegion = json['awsRegion'];
@@ -382,12 +372,12 @@ class Query$FetchCountries$fetchCountries {
     final l$phone = json['phone'];
     final l$states = json['states'];
     final l$$__typename = json['__typename'];
-    return Query$FetchCountries$fetchCountries(
+    return Query$FetchCountries$countries(
       name: (l$name as String),
       native: (l$native as String),
       awsRegion: (l$awsRegion as String),
       capital: (l$capital as String),
-      continent: Query$FetchCountries$fetchCountries$continent.fromJson(
+      continent: Query$FetchCountries$countries$continent.fromJson(
         (l$continent as Map<String, dynamic>),
       ),
       currencies: (l$currencies as List<dynamic>)
@@ -398,7 +388,7 @@ class Query$FetchCountries$fetchCountries {
       emojiU: (l$emojiU as String),
       languages: (l$languages as List<dynamic>)
           .map(
-            (e) => Query$FetchCountries$fetchCountries$languages.fromJson(
+            (e) => Query$FetchCountries$countries$languages.fromJson(
               (e as Map<String, dynamic>),
             ),
           )
@@ -406,7 +396,7 @@ class Query$FetchCountries$fetchCountries {
       phone: (l$phone as String),
       states: (l$states as List<dynamic>)
           .map(
-            (e) => Query$FetchCountries$fetchCountries$states.fromJson(
+            (e) => Query$FetchCountries$countries$states.fromJson(
               (e as Map<String, dynamic>),
             ),
           )
@@ -423,7 +413,7 @@ class Query$FetchCountries$fetchCountries {
 
   final String capital;
 
-  final Query$FetchCountries$fetchCountries$continent continent;
+  final Query$FetchCountries$countries$continent continent;
 
   final List<String> currencies;
 
@@ -433,11 +423,11 @@ class Query$FetchCountries$fetchCountries {
 
   final String emojiU;
 
-  final List<Query$FetchCountries$fetchCountries$languages> languages;
+  final List<Query$FetchCountries$countries$languages> languages;
 
   final String phone;
 
-  final List<Query$FetchCountries$fetchCountries$states> states;
+  final List<Query$FetchCountries$countries$states> states;
 
   final String $__typename;
 
@@ -509,7 +499,7 @@ class Query$FetchCountries$fetchCountries {
     if (identical(this, other)) {
       return true;
     }
-    if (other is! Query$FetchCountries$fetchCountries ||
+    if (other is! Query$FetchCountries$countries ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -603,54 +593,52 @@ class Query$FetchCountries$fetchCountries {
   }
 }
 
-extension UtilityExtension$Query$FetchCountries$fetchCountries
-    on Query$FetchCountries$fetchCountries {
-  CopyWith$Query$FetchCountries$fetchCountries<
-    Query$FetchCountries$fetchCountries
-  >
-  get copyWith => CopyWith$Query$FetchCountries$fetchCountries(this, (i) => i);
+extension UtilityExtension$Query$FetchCountries$countries
+    on Query$FetchCountries$countries {
+  CopyWith$Query$FetchCountries$countries<Query$FetchCountries$countries>
+  get copyWith => CopyWith$Query$FetchCountries$countries(this, (i) => i);
 }
 
-abstract class CopyWith$Query$FetchCountries$fetchCountries<TRes> {
-  factory CopyWith$Query$FetchCountries$fetchCountries(
-    Query$FetchCountries$fetchCountries instance,
-    TRes Function(Query$FetchCountries$fetchCountries) then,
-  ) = _CopyWithImpl$Query$FetchCountries$fetchCountries;
+abstract class CopyWith$Query$FetchCountries$countries<TRes> {
+  factory CopyWith$Query$FetchCountries$countries(
+    Query$FetchCountries$countries instance,
+    TRes Function(Query$FetchCountries$countries) then,
+  ) = _CopyWithImpl$Query$FetchCountries$countries;
 
-  factory CopyWith$Query$FetchCountries$fetchCountries.stub(TRes res) =
-      _CopyWithStubImpl$Query$FetchCountries$fetchCountries;
+  factory CopyWith$Query$FetchCountries$countries.stub(TRes res) =
+      _CopyWithStubImpl$Query$FetchCountries$countries;
 
   TRes call({
     String? name,
     String? native,
     String? awsRegion,
     String? capital,
-    Query$FetchCountries$fetchCountries$continent? continent,
+    Query$FetchCountries$countries$continent? continent,
     List<String>? currencies,
     String? currency,
     String? emoji,
     String? emojiU,
-    List<Query$FetchCountries$fetchCountries$languages>? languages,
+    List<Query$FetchCountries$countries$languages>? languages,
     String? phone,
-    List<Query$FetchCountries$fetchCountries$states>? states,
+    List<Query$FetchCountries$countries$states>? states,
     String? $__typename,
   });
-  CopyWith$Query$FetchCountries$fetchCountries$continent<TRes> get continent;
+  CopyWith$Query$FetchCountries$countries$continent<TRes> get continent;
   TRes languages(
-    Iterable<Query$FetchCountries$fetchCountries$languages> Function(
+    Iterable<Query$FetchCountries$countries$languages> Function(
       Iterable<
-        CopyWith$Query$FetchCountries$fetchCountries$languages<
-          Query$FetchCountries$fetchCountries$languages
+        CopyWith$Query$FetchCountries$countries$languages<
+          Query$FetchCountries$countries$languages
         >
       >,
     )
     _fn,
   );
   TRes states(
-    Iterable<Query$FetchCountries$fetchCountries$states> Function(
+    Iterable<Query$FetchCountries$countries$states> Function(
       Iterable<
-        CopyWith$Query$FetchCountries$fetchCountries$states<
-          Query$FetchCountries$fetchCountries$states
+        CopyWith$Query$FetchCountries$countries$states<
+          Query$FetchCountries$countries$states
         >
       >,
     )
@@ -658,13 +646,13 @@ abstract class CopyWith$Query$FetchCountries$fetchCountries<TRes> {
   );
 }
 
-class _CopyWithImpl$Query$FetchCountries$fetchCountries<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries<TRes> {
-  _CopyWithImpl$Query$FetchCountries$fetchCountries(this._instance, this._then);
+class _CopyWithImpl$Query$FetchCountries$countries<TRes>
+    implements CopyWith$Query$FetchCountries$countries<TRes> {
+  _CopyWithImpl$Query$FetchCountries$countries(this._instance, this._then);
 
-  final Query$FetchCountries$fetchCountries _instance;
+  final Query$FetchCountries$countries _instance;
 
-  final TRes Function(Query$FetchCountries$fetchCountries) _then;
+  final TRes Function(Query$FetchCountries$countries) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -683,7 +671,7 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries<TRes>
     Object? states = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
-    Query$FetchCountries$fetchCountries(
+    Query$FetchCountries$countries(
       name: name == _undefined || name == null
           ? _instance.name
           : (name as String),
@@ -698,7 +686,7 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries<TRes>
           : (capital as String),
       continent: continent == _undefined || continent == null
           ? _instance.continent
-          : (continent as Query$FetchCountries$fetchCountries$continent),
+          : (continent as Query$FetchCountries$countries$continent),
       currencies: currencies == _undefined || currencies == null
           ? _instance.currencies
           : (currencies as List<String>),
@@ -713,32 +701,32 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries<TRes>
           : (emojiU as String),
       languages: languages == _undefined || languages == null
           ? _instance.languages
-          : (languages as List<Query$FetchCountries$fetchCountries$languages>),
+          : (languages as List<Query$FetchCountries$countries$languages>),
       phone: phone == _undefined || phone == null
           ? _instance.phone
           : (phone as String),
       states: states == _undefined || states == null
           ? _instance.states
-          : (states as List<Query$FetchCountries$fetchCountries$states>),
+          : (states as List<Query$FetchCountries$countries$states>),
       $__typename: $__typename == _undefined || $__typename == null
           ? _instance.$__typename
           : ($__typename as String),
     ),
   );
 
-  CopyWith$Query$FetchCountries$fetchCountries$continent<TRes> get continent {
+  CopyWith$Query$FetchCountries$countries$continent<TRes> get continent {
     final local$continent = _instance.continent;
-    return CopyWith$Query$FetchCountries$fetchCountries$continent(
+    return CopyWith$Query$FetchCountries$countries$continent(
       local$continent,
       (e) => call(continent: e),
     );
   }
 
   TRes languages(
-    Iterable<Query$FetchCountries$fetchCountries$languages> Function(
+    Iterable<Query$FetchCountries$countries$languages> Function(
       Iterable<
-        CopyWith$Query$FetchCountries$fetchCountries$languages<
-          Query$FetchCountries$fetchCountries$languages
+        CopyWith$Query$FetchCountries$countries$languages<
+          Query$FetchCountries$countries$languages
         >
       >,
     )
@@ -746,17 +734,16 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries<TRes>
   ) => call(
     languages: _fn(
       _instance.languages.map(
-        (e) =>
-            CopyWith$Query$FetchCountries$fetchCountries$languages(e, (i) => i),
+        (e) => CopyWith$Query$FetchCountries$countries$languages(e, (i) => i),
       ),
     ).toList(),
   );
 
   TRes states(
-    Iterable<Query$FetchCountries$fetchCountries$states> Function(
+    Iterable<Query$FetchCountries$countries$states> Function(
       Iterable<
-        CopyWith$Query$FetchCountries$fetchCountries$states<
-          Query$FetchCountries$fetchCountries$states
+        CopyWith$Query$FetchCountries$countries$states<
+          Query$FetchCountries$countries$states
         >
       >,
     )
@@ -764,15 +751,15 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries<TRes>
   ) => call(
     states: _fn(
       _instance.states.map(
-        (e) => CopyWith$Query$FetchCountries$fetchCountries$states(e, (i) => i),
+        (e) => CopyWith$Query$FetchCountries$countries$states(e, (i) => i),
       ),
     ).toList(),
   );
 }
 
-class _CopyWithStubImpl$Query$FetchCountries$fetchCountries<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries<TRes> {
-  _CopyWithStubImpl$Query$FetchCountries$fetchCountries(this._res);
+class _CopyWithStubImpl$Query$FetchCountries$countries<TRes>
+    implements CopyWith$Query$FetchCountries$countries<TRes> {
+  _CopyWithStubImpl$Query$FetchCountries$countries(this._res);
 
   TRes _res;
 
@@ -781,37 +768,37 @@ class _CopyWithStubImpl$Query$FetchCountries$fetchCountries<TRes>
     String? native,
     String? awsRegion,
     String? capital,
-    Query$FetchCountries$fetchCountries$continent? continent,
+    Query$FetchCountries$countries$continent? continent,
     List<String>? currencies,
     String? currency,
     String? emoji,
     String? emojiU,
-    List<Query$FetchCountries$fetchCountries$languages>? languages,
+    List<Query$FetchCountries$countries$languages>? languages,
     String? phone,
-    List<Query$FetchCountries$fetchCountries$states>? states,
+    List<Query$FetchCountries$countries$states>? states,
     String? $__typename,
   }) => _res;
 
-  CopyWith$Query$FetchCountries$fetchCountries$continent<TRes> get continent =>
-      CopyWith$Query$FetchCountries$fetchCountries$continent.stub(_res);
+  CopyWith$Query$FetchCountries$countries$continent<TRes> get continent =>
+      CopyWith$Query$FetchCountries$countries$continent.stub(_res);
 
   languages(_fn) => _res;
 
   states(_fn) => _res;
 }
 
-class Query$FetchCountries$fetchCountries$continent {
-  Query$FetchCountries$fetchCountries$continent({
+class Query$FetchCountries$countries$continent {
+  Query$FetchCountries$countries$continent({
     required this.name,
     this.$__typename = 'Continent',
   });
 
-  factory Query$FetchCountries$fetchCountries$continent.fromJson(
+  factory Query$FetchCountries$countries$continent.fromJson(
     Map<String, dynamic> json,
   ) {
     final l$name = json['name'];
     final l$$__typename = json['__typename'];
-    return Query$FetchCountries$fetchCountries$continent(
+    return Query$FetchCountries$countries$continent(
       name: (l$name as String),
       $__typename: (l$$__typename as String),
     );
@@ -842,7 +829,7 @@ class Query$FetchCountries$fetchCountries$continent {
     if (identical(this, other)) {
       return true;
     }
-    if (other is! Query$FetchCountries$fetchCountries$continent ||
+    if (other is! Query$FetchCountries$countries$continent ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -860,44 +847,43 @@ class Query$FetchCountries$fetchCountries$continent {
   }
 }
 
-extension UtilityExtension$Query$FetchCountries$fetchCountries$continent
-    on Query$FetchCountries$fetchCountries$continent {
-  CopyWith$Query$FetchCountries$fetchCountries$continent<
-    Query$FetchCountries$fetchCountries$continent
+extension UtilityExtension$Query$FetchCountries$countries$continent
+    on Query$FetchCountries$countries$continent {
+  CopyWith$Query$FetchCountries$countries$continent<
+    Query$FetchCountries$countries$continent
   >
   get copyWith =>
-      CopyWith$Query$FetchCountries$fetchCountries$continent(this, (i) => i);
+      CopyWith$Query$FetchCountries$countries$continent(this, (i) => i);
 }
 
-abstract class CopyWith$Query$FetchCountries$fetchCountries$continent<TRes> {
-  factory CopyWith$Query$FetchCountries$fetchCountries$continent(
-    Query$FetchCountries$fetchCountries$continent instance,
-    TRes Function(Query$FetchCountries$fetchCountries$continent) then,
-  ) = _CopyWithImpl$Query$FetchCountries$fetchCountries$continent;
+abstract class CopyWith$Query$FetchCountries$countries$continent<TRes> {
+  factory CopyWith$Query$FetchCountries$countries$continent(
+    Query$FetchCountries$countries$continent instance,
+    TRes Function(Query$FetchCountries$countries$continent) then,
+  ) = _CopyWithImpl$Query$FetchCountries$countries$continent;
 
-  factory CopyWith$Query$FetchCountries$fetchCountries$continent.stub(
-    TRes res,
-  ) = _CopyWithStubImpl$Query$FetchCountries$fetchCountries$continent;
+  factory CopyWith$Query$FetchCountries$countries$continent.stub(TRes res) =
+      _CopyWithStubImpl$Query$FetchCountries$countries$continent;
 
   TRes call({String? name, String? $__typename});
 }
 
-class _CopyWithImpl$Query$FetchCountries$fetchCountries$continent<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries$continent<TRes> {
-  _CopyWithImpl$Query$FetchCountries$fetchCountries$continent(
+class _CopyWithImpl$Query$FetchCountries$countries$continent<TRes>
+    implements CopyWith$Query$FetchCountries$countries$continent<TRes> {
+  _CopyWithImpl$Query$FetchCountries$countries$continent(
     this._instance,
     this._then,
   );
 
-  final Query$FetchCountries$fetchCountries$continent _instance;
+  final Query$FetchCountries$countries$continent _instance;
 
-  final TRes Function(Query$FetchCountries$fetchCountries$continent) _then;
+  final TRes Function(Query$FetchCountries$countries$continent) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({Object? name = _undefined, Object? $__typename = _undefined}) =>
       _then(
-        Query$FetchCountries$fetchCountries$continent(
+        Query$FetchCountries$countries$continent(
           name: name == _undefined || name == null
               ? _instance.name
               : (name as String),
@@ -908,29 +894,29 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries$continent<TRes>
       );
 }
 
-class _CopyWithStubImpl$Query$FetchCountries$fetchCountries$continent<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries$continent<TRes> {
-  _CopyWithStubImpl$Query$FetchCountries$fetchCountries$continent(this._res);
+class _CopyWithStubImpl$Query$FetchCountries$countries$continent<TRes>
+    implements CopyWith$Query$FetchCountries$countries$continent<TRes> {
+  _CopyWithStubImpl$Query$FetchCountries$countries$continent(this._res);
 
   TRes _res;
 
   call({String? name, String? $__typename}) => _res;
 }
 
-class Query$FetchCountries$fetchCountries$languages {
-  Query$FetchCountries$fetchCountries$languages({
+class Query$FetchCountries$countries$languages {
+  Query$FetchCountries$countries$languages({
     required this.name,
     required this.native,
     this.$__typename = 'Language',
   });
 
-  factory Query$FetchCountries$fetchCountries$languages.fromJson(
+  factory Query$FetchCountries$countries$languages.fromJson(
     Map<String, dynamic> json,
   ) {
     final l$name = json['name'];
     final l$native = json['native'];
     final l$$__typename = json['__typename'];
-    return Query$FetchCountries$fetchCountries$languages(
+    return Query$FetchCountries$countries$languages(
       name: (l$name as String),
       native: (l$native as String),
       $__typename: (l$$__typename as String),
@@ -967,7 +953,7 @@ class Query$FetchCountries$fetchCountries$languages {
     if (identical(this, other)) {
       return true;
     }
-    if (other is! Query$FetchCountries$fetchCountries$languages ||
+    if (other is! Query$FetchCountries$countries$languages ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -990,38 +976,37 @@ class Query$FetchCountries$fetchCountries$languages {
   }
 }
 
-extension UtilityExtension$Query$FetchCountries$fetchCountries$languages
-    on Query$FetchCountries$fetchCountries$languages {
-  CopyWith$Query$FetchCountries$fetchCountries$languages<
-    Query$FetchCountries$fetchCountries$languages
+extension UtilityExtension$Query$FetchCountries$countries$languages
+    on Query$FetchCountries$countries$languages {
+  CopyWith$Query$FetchCountries$countries$languages<
+    Query$FetchCountries$countries$languages
   >
   get copyWith =>
-      CopyWith$Query$FetchCountries$fetchCountries$languages(this, (i) => i);
+      CopyWith$Query$FetchCountries$countries$languages(this, (i) => i);
 }
 
-abstract class CopyWith$Query$FetchCountries$fetchCountries$languages<TRes> {
-  factory CopyWith$Query$FetchCountries$fetchCountries$languages(
-    Query$FetchCountries$fetchCountries$languages instance,
-    TRes Function(Query$FetchCountries$fetchCountries$languages) then,
-  ) = _CopyWithImpl$Query$FetchCountries$fetchCountries$languages;
+abstract class CopyWith$Query$FetchCountries$countries$languages<TRes> {
+  factory CopyWith$Query$FetchCountries$countries$languages(
+    Query$FetchCountries$countries$languages instance,
+    TRes Function(Query$FetchCountries$countries$languages) then,
+  ) = _CopyWithImpl$Query$FetchCountries$countries$languages;
 
-  factory CopyWith$Query$FetchCountries$fetchCountries$languages.stub(
-    TRes res,
-  ) = _CopyWithStubImpl$Query$FetchCountries$fetchCountries$languages;
+  factory CopyWith$Query$FetchCountries$countries$languages.stub(TRes res) =
+      _CopyWithStubImpl$Query$FetchCountries$countries$languages;
 
   TRes call({String? name, String? native, String? $__typename});
 }
 
-class _CopyWithImpl$Query$FetchCountries$fetchCountries$languages<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries$languages<TRes> {
-  _CopyWithImpl$Query$FetchCountries$fetchCountries$languages(
+class _CopyWithImpl$Query$FetchCountries$countries$languages<TRes>
+    implements CopyWith$Query$FetchCountries$countries$languages<TRes> {
+  _CopyWithImpl$Query$FetchCountries$countries$languages(
     this._instance,
     this._then,
   );
 
-  final Query$FetchCountries$fetchCountries$languages _instance;
+  final Query$FetchCountries$countries$languages _instance;
 
-  final TRes Function(Query$FetchCountries$fetchCountries$languages) _then;
+  final TRes Function(Query$FetchCountries$countries$languages) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -1030,7 +1015,7 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries$languages<TRes>
     Object? native = _undefined,
     Object? $__typename = _undefined,
   }) => _then(
-    Query$FetchCountries$fetchCountries$languages(
+    Query$FetchCountries$countries$languages(
       name: name == _undefined || name == null
           ? _instance.name
           : (name as String),
@@ -1044,27 +1029,27 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries$languages<TRes>
   );
 }
 
-class _CopyWithStubImpl$Query$FetchCountries$fetchCountries$languages<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries$languages<TRes> {
-  _CopyWithStubImpl$Query$FetchCountries$fetchCountries$languages(this._res);
+class _CopyWithStubImpl$Query$FetchCountries$countries$languages<TRes>
+    implements CopyWith$Query$FetchCountries$countries$languages<TRes> {
+  _CopyWithStubImpl$Query$FetchCountries$countries$languages(this._res);
 
   TRes _res;
 
   call({String? name, String? native, String? $__typename}) => _res;
 }
 
-class Query$FetchCountries$fetchCountries$states {
-  Query$FetchCountries$fetchCountries$states({
+class Query$FetchCountries$countries$states {
+  Query$FetchCountries$countries$states({
     required this.name,
     this.$__typename = 'State',
   });
 
-  factory Query$FetchCountries$fetchCountries$states.fromJson(
+  factory Query$FetchCountries$countries$states.fromJson(
     Map<String, dynamic> json,
   ) {
     final l$name = json['name'];
     final l$$__typename = json['__typename'];
-    return Query$FetchCountries$fetchCountries$states(
+    return Query$FetchCountries$countries$states(
       name: (l$name as String),
       $__typename: (l$$__typename as String),
     );
@@ -1095,7 +1080,7 @@ class Query$FetchCountries$fetchCountries$states {
     if (identical(this, other)) {
       return true;
     }
-    if (other is! Query$FetchCountries$fetchCountries$states ||
+    if (other is! Query$FetchCountries$countries$states ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1113,43 +1098,43 @@ class Query$FetchCountries$fetchCountries$states {
   }
 }
 
-extension UtilityExtension$Query$FetchCountries$fetchCountries$states
-    on Query$FetchCountries$fetchCountries$states {
-  CopyWith$Query$FetchCountries$fetchCountries$states<
-    Query$FetchCountries$fetchCountries$states
+extension UtilityExtension$Query$FetchCountries$countries$states
+    on Query$FetchCountries$countries$states {
+  CopyWith$Query$FetchCountries$countries$states<
+    Query$FetchCountries$countries$states
   >
   get copyWith =>
-      CopyWith$Query$FetchCountries$fetchCountries$states(this, (i) => i);
+      CopyWith$Query$FetchCountries$countries$states(this, (i) => i);
 }
 
-abstract class CopyWith$Query$FetchCountries$fetchCountries$states<TRes> {
-  factory CopyWith$Query$FetchCountries$fetchCountries$states(
-    Query$FetchCountries$fetchCountries$states instance,
-    TRes Function(Query$FetchCountries$fetchCountries$states) then,
-  ) = _CopyWithImpl$Query$FetchCountries$fetchCountries$states;
+abstract class CopyWith$Query$FetchCountries$countries$states<TRes> {
+  factory CopyWith$Query$FetchCountries$countries$states(
+    Query$FetchCountries$countries$states instance,
+    TRes Function(Query$FetchCountries$countries$states) then,
+  ) = _CopyWithImpl$Query$FetchCountries$countries$states;
 
-  factory CopyWith$Query$FetchCountries$fetchCountries$states.stub(TRes res) =
-      _CopyWithStubImpl$Query$FetchCountries$fetchCountries$states;
+  factory CopyWith$Query$FetchCountries$countries$states.stub(TRes res) =
+      _CopyWithStubImpl$Query$FetchCountries$countries$states;
 
   TRes call({String? name, String? $__typename});
 }
 
-class _CopyWithImpl$Query$FetchCountries$fetchCountries$states<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries$states<TRes> {
-  _CopyWithImpl$Query$FetchCountries$fetchCountries$states(
+class _CopyWithImpl$Query$FetchCountries$countries$states<TRes>
+    implements CopyWith$Query$FetchCountries$countries$states<TRes> {
+  _CopyWithImpl$Query$FetchCountries$countries$states(
     this._instance,
     this._then,
   );
 
-  final Query$FetchCountries$fetchCountries$states _instance;
+  final Query$FetchCountries$countries$states _instance;
 
-  final TRes Function(Query$FetchCountries$fetchCountries$states) _then;
+  final TRes Function(Query$FetchCountries$countries$states) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
   TRes call({Object? name = _undefined, Object? $__typename = _undefined}) =>
       _then(
-        Query$FetchCountries$fetchCountries$states(
+        Query$FetchCountries$countries$states(
           name: name == _undefined || name == null
               ? _instance.name
               : (name as String),
@@ -1160,9 +1145,9 @@ class _CopyWithImpl$Query$FetchCountries$fetchCountries$states<TRes>
       );
 }
 
-class _CopyWithStubImpl$Query$FetchCountries$fetchCountries$states<TRes>
-    implements CopyWith$Query$FetchCountries$fetchCountries$states<TRes> {
-  _CopyWithStubImpl$Query$FetchCountries$fetchCountries$states(this._res);
+class _CopyWithStubImpl$Query$FetchCountries$countries$states<TRes>
+    implements CopyWith$Query$FetchCountries$countries$states<TRes> {
+  _CopyWithStubImpl$Query$FetchCountries$countries$states(this._res);
 
   TRes _res;
 

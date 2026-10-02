@@ -1,23 +1,23 @@
 query FetchCountries {
-    fetchCountries {
-        name: name
-        native: native
-        awsRegion: awsRegion
-        capital: capital
+    countries {
+        name
+        native
+        awsRegion
+        capital
         continent {
-            name: name
+            name
         }
-        currencies: currencies
-        currency: currency
-        emoji: emoji
-        emojiU: emojiU
+        currencies
+        currency
+        emoji
+        emojiU
         languages {
-            name: name
-            native: native
+            name
+            native
         }
-        phone: phone
+        phone
         states {
-            name: name
+            name
         }
     }
 }

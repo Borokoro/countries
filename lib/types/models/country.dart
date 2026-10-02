@@ -1,3 +1,4 @@
+import 'package:countries/services/countries/countries_generator/countries_query.graphql.dart';
 import 'package:equatable/equatable.dart';
 
 import 'continent.dart';
@@ -47,6 +48,29 @@ class Country extends Equatable {
       languages: (json["languages"] ?? []).map<Language>((language) => Language.fromJson(language)).toList(),
       phone: json["phone"] ?? "",
       states: (json["states"] ?? []).map<StateCountry>((state) => StateCountry.fromJson(state)).toList(),
+    );
+  }
+
+  factory Country.fromGenerated(
+      Query$FetchCountries$countries country,
+      ) {
+    return Country(
+      name: country.name,
+      native: country.native,
+      awsRegion: country.awsRegion,
+      capital: country.capital,
+      continent: Continent.fromGenerated(country.continent),
+      currencies: country.currencies,
+      currency: country.currency,
+      emoji: country.emoji,
+      emojiU: country.emojiU,
+      languages: country.languages
+          .map(Language.fromGenerated)
+          .toList(),
+      phone: country.phone,
+      states: country.states
+          .map(StateCountry.fromGenerated)
+          .toList(),
     );
   }
 

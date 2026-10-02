@@ -1,3 +1,4 @@
+import 'package:countries/services/countries/countries_generator/countries_query.graphql.dart';
 import 'package:equatable/equatable.dart';
 
 class Continent extends Equatable {
@@ -7,6 +8,14 @@ class Continent extends Equatable {
 
   factory Continent.fromJson(Map<String, dynamic> json) {
     return Continent(name: json["name"]);
+  }
+
+  factory Continent.fromGenerated(
+      Query$FetchCountries$countries$continent continent,
+      ) {
+    return Continent(
+      name: continent.name,
+    );
   }
 
   @override
