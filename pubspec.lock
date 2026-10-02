@@ -121,6 +121,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.2"
+  code_builder:
+    dependency: transitive
+    description:
+      name: code_builder
+      sha256: aa5932e94c6c39c2f9ec4e5e06dfdd11a9430a61f6c41b6ba75b28ce0c481baf
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.12.0"
   collection:
     dependency: transitive
     description:
@@ -243,6 +251,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  gql_code_builder:
+    dependency: transitive
+    description:
+      name: gql_code_builder
+      sha256: deb9a659b7236edfe9d0b72c5b724cf4a33ce50686b7eac97cc48ba2bf5615d2
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.15.2"
+  gql_code_builder_serializers:
+    dependency: transitive
+    description:
+      name: gql_code_builder_serializers
+      sha256: ad8554da95de9f218c744518fcb55b6f94ffde4659aa50479eaae05855645877
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0+1"
   gql_dedupe_link:
     dependency: transitive
     description:
@@ -291,6 +315,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  gql_tristate_value:
+    dependency: transitive
+    description:
+      name: gql_tristate_value
+      sha256: "2fdf2b9364bb2164fe7d23696d6128e8f76660941521a4851a4c19a2983422f5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   graphql:
     dependency: "direct main"
     description:
@@ -299,6 +331,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.2.4"
+  graphql_codegen:
+    dependency: "direct main"
+    description:
+      name: graphql_codegen
+      sha256: "875ac7c3572e383ae1a9e2590a6d833dd3e2c256594b8448bc1af481e8455416"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.2"
   graphs:
     dependency: transitive
     description:
@@ -407,10 +447,10 @@ packages:
     dependency: transitive
     description:
       name: matcher
-      sha256: dc0b7dc7651697ea4ff3e69ef44b0407ea32c487a39fff6a4004fa585e901861
+      sha256: "31bd099b47c10cd1aeb55146a2d46ce0277630ecef3f7dae54ad7873f36696cd"
       url: "https://pub.dev"
     source: hosted
-    version: "0.12.19"
+    version: "0.12.20"
   material_color_utilities:
     dependency: transitive
     description:
@@ -423,10 +463,10 @@ packages:
     dependency: transitive
     description:
       name: meta
-      sha256: "23f08335362185a5ea2ad3a4e597f1375e78bce8a040df5c600c8d3552ef2394"
+      sha256: "307249ce4ff29d58a18e97f6345f539382eb9c9c29ecda628900f31de0443dd9"
       url: "https://pub.dev"
     source: hosted
-    version: "1.17.0"
+    version: "1.19.0"
   mime:
     dependency: transitive
     description:
@@ -499,6 +539,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.6.0"
+  recase:
+    dependency: transitive
+    description:
+      name: recase
+      sha256: e4eb4ec2dcdee52dcf99cb4ceabaffc631d7424ee55e56f280bc039737f89213
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.0"
   rxdart:
     dependency: transitive
     description:
@@ -580,10 +628,10 @@ packages:
     dependency: transitive
     description:
       name: test_api
-      sha256: "8161c84903fd860b26bfdefb7963b3f0b68fee7adea0f59ef805ecca346f0c7a"
+      sha256: "2a122cbe059f8b610d3a5415f42e255b6c17b1f21eee1d960f31080237fb4f11"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.10"
+    version: "0.7.12"
   typed_data:
     dependency: transitive
     description:
@@ -604,10 +652,10 @@ packages:
     dependency: transitive
     description:
       name: vector_math
-      sha256: d530bd74fea330e6e364cda7a85019c434070188383e1cd8d9777ee586914c5b
+      sha256: "92b9910f66ed1057fd4da7b040ae7c74cafacf885bdc81be496928d5049b032d"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.0"
+    version: "2.4.3"
   vm_service:
     dependency: transitive
     description:

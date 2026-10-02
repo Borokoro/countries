@@ -1,0 +1,31 @@
+type Country {
+    name: String!
+    native: String!
+    awsRegion: String!
+    capital: String!
+    continent: Continent!
+    currencies: [String!]!
+    currency: String
+    emoji: String!
+    emojiU: String!
+    languages: [Language!]!
+    phone: String!
+    states: [State!]!
+}
+
+type Continent {
+    name: String!
+}
+
+type Language {
+    name: String!
+    native: String!
+}
+
+type State {
+    name: String!
+}
+
+type Query {
+    fetchCountries: [Country]
+}
